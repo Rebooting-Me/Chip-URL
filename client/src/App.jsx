@@ -1,15 +1,13 @@
-import { BrowserRouter, Routes, Route, Router, Link } from 'react-router-dom'
-import './App.css'
-import Navbar from './components/navbar/Navbar'
-import Footer from './components/footer/Footer'
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import MainPage from "./pages/MainPage";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Navbar isAuthenticated={false} />
-      <Footer />
-    </>
-  )
-}
+    <Routes>
+      <Route path="/" element={<MainPage isAuthenticated={false} />} />
+    </Routes>
+  );
+};
 
-export default App
+export default App;
