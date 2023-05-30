@@ -16,6 +16,6 @@ a {
   padding: 0.2em;
 }
 
-a:hover {
+footer a:hover {
   transform: scale(1.08);
 }

@@ -7,9 +7,9 @@ const Navbar = ({ isAuthenticated }) => {
   return (
     <nav className="navbar">
       <BrowserRouter>
-        <div className="navbar-container" style={{display: 'flex', justifyContent: 'space-between', paddingRight: '30px'}}>
-          <Link to="/" className="navbar-logo">
-            <img style={{ width: "12rem" }} src={Logo} alt="brand-logo" />
+        <div style={{display: 'flex', justifyContent: 'space-between', paddingRight: '30px'}}>
+          <Link to="/">
+            <img className="navbar-logo" style={{ width: "12rem", display: 'block' }} src={Logo} alt="brand-logo" />
           </Link>
           <ul style={{display: 'flex', gap: '2em', listStyle: 'none' }}>
             {!isAuthenticated && (

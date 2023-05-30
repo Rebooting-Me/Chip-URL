@@ -2,3 +2,20 @@
     text-decoration: none;
     color: white;
 }
+
+li {
+    transition: all 0.1s ease-in;
+}
+
+li:hover {
+    transform: scale(1.08);
+    text-shadow: 0px 0px 16px #52bdff;
+}
+
+.navbar-logo {
+    transition: all 0.05s ease-in;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.03);
+}
