@@ -1,7 +1,7 @@
 import { BrowserRouter, Router, Route, Routes, Link } from "react-router-dom";
 import Logo from "./../../assets/Logo.svg";
-
-// create a Navbar component that conditionally renders the links based on the user's authentication status (logged in or not)
+import Power from "./../../assets/power.svg";
+import "./Navbar.css";
 
 const Navbar = ({ isAuthenticated }) => {
   return (
@@ -11,37 +11,29 @@ const Navbar = ({ isAuthenticated }) => {
           <Link to="/" className="navbar-logo">
             <img style={{ width: "12rem" }} src={Logo} alt="brand-logo" />
           </Link>
-          <ul className="nav-menu" style={{display: 'flex', gap: '1em'}}>
-            <li className="nav-item">
-              <Link to="/" className="nav-links">
-                Home
-              </Link>
-            </li>
-            {/* {isAuthenticated && (
-                <li className="nav-item">
-                <Link to="/dashboard" className="nav-links">
-                    Dashboard
-                </Link>
-                </li>
-            )} */}
+          <ul style={{display: 'flex', gap: '2em', listStyle: 'none' }}>
             {!isAuthenticated && (
-              <li className="nav-item">
+              <li>
+                <Link to="/signup" className="nav-links" style={{color: '#FF5E3A'}}>
+                  Sign Up
+                </Link>
+              </li>
+            )}
+            {!isAuthenticated && (
+              <li>
                 <Link to="/login" className="nav-links">
                   Login
                 </Link>
               </li>
             )}
-            {!isAuthenticated && (
-              <li className="nav-item">
-                <Link to="/signup" className="nav-links">
-                  Sign Up
-                </Link>
-              </li>
-            )}
+            
+            <li>
+              <Link to="/contact" className="nav-links">Contact</Link>
+            </li>
             {isAuthenticated && (
-              <li className="nav-item">
+              <li>
                 <Link to="/logout" className="nav-links">
-                  Logout
+                  <img style={{width: '1.5em'}} src={Power} alt="logout-icon" />
                 </Link>
               </li>
             )}
