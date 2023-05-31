@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import "./Form.css";
+import { Link } from "react-router-dom";
 
 const Form = ({ isAuthenticated }) => {
   const [originalUrl, setOriginalUrl] = useState("");
@@ -34,45 +36,41 @@ const Form = ({ isAuthenticated }) => {
   };
 
   return (
-    <section>
+    <section style={{position: 'relative'}}>
       <form className="inputForm" onSubmit={handleSubmit}>
-        <input
-          type="url"
-          id="originalUrl"
-          name="originalUrl"
-          placeholder="Enter the original url*"
-          required
-          value={originalUrl}
-          onChange={(e) => setOriginalUrl(e.target.value)}
-        />
-        {!isAuthenticated && (
-          <p
-            style={{ color: "white", fontFamily: "Inter", textAlign: "center" }}
-          >
-            Want a custom shortened url?
-            <br />
-            <a
-              href="/login"
-              style={{ color: "#FF5E3A", textDecoration: "none" }}
-            >
-              Sign up!
-            </a>
-          </p>
-        )}
-        {isAuthenticated && (
           <input
-            type="text"
-            id="shortUrl"
-            name="shortUrl"
-            placeholder="Customize your link"
-            value={shortUrl}
-            onChange={(e) => setShortUrl(e.target.value)}
+            type="url"
+            id="originalUrl"
+            name="originalUrl"
+            placeholder="Enter the original url*"
+            required
+            value={originalUrl}
+            onChange={(e) => setOriginalUrl(e.target.value)}
           />
-        )}
-        <button type="submit" id="chip">
-          <span>Chip!</span>
-        </button>
-      </form>
+          {isAuthenticated && (
+            <input
+              type="text"
+              id="shortUrl"
+              name="shortUrl"
+              placeholder="Customize your link"
+              value={shortUrl}
+              onChange={(e) => setShortUrl(e.target.value)}
+            />
+          )}
+          <button type="submit" id="chip">
+            <span>Chip!</span>
+          </button>
+          
+        </form>
+      {!isAuthenticated && (
+        <p>
+          Want a custom shortened url?
+          <br />
+          <Link href="/login" style={{ color: "#FF5E3A", textDecoration: "none" }}>
+            Sign up!
+          </Link>
+        </p>
+      )}
       {showOverlay && (
         <div className="overlay">
           <div
@@ -113,7 +111,8 @@ const Form = ({ isAuthenticated }) => {
                   style={{
                     textAlign: "center",
                     color: "rgba(121.12, 121.12, 121.12, 1)",
-                    fontSize: 20}}
+                    fontSize: 20,
+                  }}
                 >
                   {generatedUrl}
                 </p>

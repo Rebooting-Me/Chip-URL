@@ -1,0 +1,70 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    /* border: 1px solid #ccc; */
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+
+.inputForm {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.inputForm input {
+    width: 400px;
+    height: 4.6em;
+    text-align: center;
+    border-radius: 1em;
+    border: none;
+    font-size: large;
+    transition: transform 0.1s ease-in-out;
+    background-color: white;
+}
+.inputForm input:hover {
+    transform: scale(1.03);
+}
+
+.inputForm input::placeholder,
+textarea::placeholder {
+    color: #555;
+    font-style: italic;
+}
+
+.inputForm p {
+    color: "white";
+    font-family: "Inter";
+    text-align: left;
+    font-size: 15px;
+    height: fit-content;
+    width: 120px;
+}
+
+#chip {
+    width: fit-content;
+    height: 4.6em;
+    padding: 0 20px;
+    border-radius: 1.6em 0 1.6em 1.6em;
+    border: none;
+    font-family: 'Inter';
+    font-size: large;
+    font-weight: 800;
+    background-color: #FF5E3A;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+#chip:hover {
+    transform: scale(1.02);
+}
+
+#chip span {
+    color: #fff;
+    font-size: 2em;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
