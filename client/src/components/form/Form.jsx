@@ -65,7 +65,7 @@ const Form = ({ isAuthenticated }) => {
           </button>
         </form>
       {!isAuthenticated && (
-        <p>
+        <p id="want-custom">
           Want a custom shortened url?
           <br />
           <Link href="/login" style={{ color: "#FF5E3A", textDecoration: "none" }}>

@@ -1,6 +1,7 @@
 import Boy from "../assets/sign-up-boy.svg";
 import { Link } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
+import Footer from "../components/footer/Footer";
 import { useState } from "react";
 import "./Common.css";
 
@@ -121,6 +122,7 @@ const SignupPage = () => {
           {/*make this a route*/}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

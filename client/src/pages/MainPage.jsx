@@ -8,7 +8,7 @@ const MainPage = ({isAuthenticated}) => {
       <div className="main-page">
         <Navbar isAuthenticated={isAuthenticated} />
         <Hero isAuthenticated={isAuthenticated} />
-        <div className="foot"><Footer /></div>
+        {/* <div className="foot"><Footer /></div> */}
         
       </div>
     );

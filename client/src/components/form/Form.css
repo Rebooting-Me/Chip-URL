@@ -41,15 +41,6 @@ textarea::placeholder {
     font-weight: bold;
 } */
 
-.inputForm p {
-    color: "white";
-    font-family: "Inter";
-    text-align: left;
-    font-size: 15px;
-    height: fit-content;
-    width: 120px;
-}
-
 #chip {
     width: fit-content;
     height: 4.6em;

@@ -4,14 +4,6 @@
     align-items: center;
 }
 
-.foot {
-    /* align the footer to the bottom of the page */
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
 form {
     margin-top: 15px;
 }
