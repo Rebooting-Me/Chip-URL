@@ -38,6 +38,7 @@ const Form = ({ isAuthenticated }) => {
   return (
     <section style={{position: 'relative'}}>
       <form className="inputForm" onSubmit={handleSubmit}>
+        <div style={{display: 'flex', flexDirection: 'column', gap: '1em'}}>
           <input
             type="url"
             id="originalUrl"
@@ -57,10 +58,11 @@ const Form = ({ isAuthenticated }) => {
               onChange={(e) => setShortUrl(e.target.value)}
             />
           )}
+          </div>
+          
           <button type="submit" id="chip">
             <span>Chip!</span>
           </button>
-          
         </form>
       {!isAuthenticated && (
         <p>

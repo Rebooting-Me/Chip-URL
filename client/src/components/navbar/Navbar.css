@@ -19,3 +19,7 @@ li:hover {
 .navbar-logo:hover {
     transform: scale(1.03);
 }
+
+.navbar {
+    width: 100%;
+}

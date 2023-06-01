@@ -25,6 +25,7 @@ section {
     font-size: large;
     transition: transform 0.1s ease-in-out;
     background-color: white;
+    color: rgb(22, 22, 22);
 }
 .inputForm input:hover {
     transform: scale(1.03);
@@ -32,9 +33,13 @@ section {
 
 .inputForm input::placeholder,
 textarea::placeholder {
-    color: #555;
+    color: #555; 
     font-style: italic;
 }
+
+/* .inputForm input:focus {
+    font-weight: bold;
+} */
 
 .inputForm p {
     color: "white";

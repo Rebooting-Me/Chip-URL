@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import MainPage from "./pages/MainPage";
+import SignupPage from "./pages/Signup";
 import { useState } from "react";
 
 const App = () => {
@@ -10,9 +11,10 @@ const App = () => {
       : false
   );
   return (
-    <Routes>
-      <Route path="/" element={<MainPage isAuthenticated={isAuthenticated} />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<MainPage isAuthenticated={isAuthenticated} />} />
+        <Route path="/signup" element={<SignupPage />} />
+      </Routes>
   );
 };
 
