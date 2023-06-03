@@ -1,19 +1,47 @@
 .hero {
     display: flex;
     width: 1000px;
-    margin: 30px auto 0 auto;
-    position: relative;
+    padding-top: 30px;
+}
+
+/*write a media query which reduces image size once screen goes below 1000px */
+@media screen and (max-width: 1000px) {
+    .hero {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 869px) {
+    #lady {
+        position:absolute;
+        right: 0;
+    }
+    .hero-text h1 {
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width: 688px) {
+    .hero-text h1 {
+        max-width: 100%;
+        padding: 0 20px;
+        text-align: center;
+    }
+    #lady {
+        opacity: 30% !important;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
 }
 
 #heading {
-    width: 80%;
+    width: 90%;
 }
 
-.hero img {
-    width: auto;
+#lady {
+    display: inline-block;
+    width: 19rem;
+    height: auto;
     z-index: -100;
-}
-
-.hero-text {
-    padding-left: 30px;
 }

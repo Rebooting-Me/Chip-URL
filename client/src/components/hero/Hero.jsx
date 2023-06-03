@@ -14,10 +14,7 @@ const Hero = ({isAuthenticated}) => {
           </h1>
           <Form isAuthenticated={isAuthenticated} />
         </div>
-        <img src={Lady} alt="Lady" />
-        {/* <div className="hero-image">
-          
-        </div> */}
+        <img id="lady" src={Lady} alt="Lady" />
       </div>
     );
 }

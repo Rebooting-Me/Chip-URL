@@ -59,7 +59,6 @@ const Form = ({ isAuthenticated }) => {
             />
           )}
           </div>
-          
           <button type="submit" id="chip">
             <span>Chip!</span>
           </button>
