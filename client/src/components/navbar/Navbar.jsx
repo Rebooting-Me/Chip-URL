@@ -10,7 +10,8 @@ const Navbar = ({ isAuthenticated }) => {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          paddingRight: "30px",
+          alignItems: "center",
+          padding: "10px 30px",
         }}
       >
         <Link to="/">

@@ -36,9 +36,9 @@ const Form = ({ isAuthenticated }) => {
   };
 
   return (
-    <section style={{position: 'relative'}}>
+    <section style={{ position: "relative" }}>
       <form className="inputForm" onSubmit={handleSubmit}>
-        <div style={{display: 'flex', flexDirection: 'column', gap: '1em'}}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "1em" }}>
           <input
             type="url"
             id="originalUrl"
@@ -58,22 +58,41 @@ const Form = ({ isAuthenticated }) => {
               onChange={(e) => setShortUrl(e.target.value)}
             />
           )}
-          </div>
-          <button type="submit" id="chip">
-            <span>Chip!</span>
-          </button>
-        </form>
+        </div>
+        <button type="submit" id="chip">
+          <span>Chip!</span>
+        </button>
+      </form>
       {!isAuthenticated && (
         <p id="want-custom">
           Want a custom shortened url?
           <br />
-          <Link href="/login" style={{ color: "#FF5E3A", textDecoration: "none" }}>
+          <Link
+            href="/login"
+            style={{
+              color: "#FF5E3A",
+              textDecoration: "none",
+              fontWeight: "bold",
+            }}
+          >
             Sign up!
           </Link>
         </p>
       )}
       {showOverlay && (
         <div className="overlay">
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100vw",
+              height: "100vh",
+              backgroundColor: "rgba(0, 0, 0, 0.24)",
+              backdropFilter: "blur(2px)",
+              zIndex: "100",
+            }}
+          />
           <div
             className="overlay-content"
             style={{
@@ -136,19 +155,6 @@ const Form = ({ isAuthenticated }) => {
               Close
             </button>
           </div>
-
-          <div
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100vw",
-              height: "100vh",
-              backgroundColor: "rgba(0, 0, 0, 0.24)",
-              backdropFilter: "blur(2px)",
-              zIndex: "100",
-            }}
-          />
         </div>
       )}
     </section>

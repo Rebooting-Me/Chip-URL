@@ -9,7 +9,6 @@ const MainPage = ({isAuthenticated}) => {
         <Navbar isAuthenticated={isAuthenticated} />
         <Hero isAuthenticated={isAuthenticated} />
         {/* <div className="foot"><Footer /></div> */}
-        
       </div>
     );
 }

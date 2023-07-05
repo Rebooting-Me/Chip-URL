@@ -104,7 +104,10 @@ const SignupPage = () => {
               {"->"}
             </button>
           </form>
-          <p>
+          <p style= {
+            {display: "flex",
+            alignItems: "center",
+            }}>
             Already have an account?
             <Link
               id="login"
@@ -122,7 +125,6 @@ const SignupPage = () => {
           {/*make this a route*/}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

@@ -66,6 +66,8 @@ textarea::placeholder {
 }
 
 #want-custom {
+    display: flex;
+    align-items: center;
     align-self: flex-start;
 }
 
